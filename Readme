@@ -10,3 +10,18 @@ App Backend: A container running the backend logic that communicates with both t
 The containers are placed within the same Kubernetes Pod to ensure that they can easily communicate with each other using localhost. Kubernetes will manage the lifecycle of the pod, handle resource allocation, and facilitate communication between the containers.
 
 Prerequisites
+Before deploying this multicontainer application to Kubernetes, ensure you have the following:
+
+Docker Desktop with Kubernetes: Docker Desktop should be installed and configured to run a local Kubernetes cluster. You can enable Kubernetes directly in Docker Desktop's settings under the "Kubernetes" tab.
+
+Docker Desktop Installation Guide
+After installing Docker Desktop, make sure to enable the Kubernetes feature within Docker's settings.
+kubectl: The Kubernetes command-line tool, which is used to interact with your local Kubernetes cluster. It should be automatically installed when you enable Kubernetes in Docker Desktop.
+
+Verify the installation by running:
+
+kubectl version
+Docker: Docker is used to build custom container images that will be deployed to the Kubernetes cluster. Docker is not used for container management in Kubernetes (which is handled by kubectl), but for creating and pushing images to the local registry.
+
+You can build and run your Docker images using:
+docker build -t <image-name> .
