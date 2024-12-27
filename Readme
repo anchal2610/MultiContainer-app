@@ -1,0 +1,12 @@
+Multicontainer Application Deployment in Kubernetes
+This repository demonstrates how to deploy a multicontainer application on a Kubernetes cluster. The application is composed of multiple containers running together within a single pod, showcasing how to deploy and manage services that require inter-container communication and shared resources.
+
+Overview
+In this example, we deploy a sample multicontainer application with the following components:
+
+Web Server: A container running an HTTP web server (e.g., Nginx or Apache).
+Database: A container running a database server (e.g., MySQL or PostgreSQL).
+App Backend: A container running the backend logic that communicates with both the web server and the database.
+The containers are placed within the same Kubernetes Pod to ensure that they can easily communicate with each other using localhost. Kubernetes will manage the lifecycle of the pod, handle resource allocation, and facilitate communication between the containers.
+
+Prerequisites
